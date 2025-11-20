@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@theme {
+  /* Breakpoints */
+  --breakpoint-xs: 30rem;
+
+  /* Colors */
+  --color-primary: #008a97;
+  --color-secondary: #a80065;
+}
+
+a {
+  @apply text-secondary;
+}
+
+.footer {
+  @apply bg-primary text-white text-center py-5 fixed bottom-0 w-full;
+}
+
+.flex-between {
+  @apply flex justify-between items-center;
+}
+
+.nav {
+  @apply container mx-auto flex justify-between items-center py-5;
+}
+
+.logo-h1 {
+  @apply uppercase text-2xl font-semibold;
+}
+
+.auth-content {
+  @apply flex items-center justify-center;
+  min-height: calc(100vh - 150px);
+}
+
+.auth-content form {
+  @apply space-y-3.5 w-4/5 sm:w-3/5 lg:max-w-[700px];
+}
+
+form .grouped {
+  @apply block space-y-4 sm:flex sm:space-y-0 sm:gap-4;
+}
+
+form .grouped>div {
+  @apply w-full sm:w-1/2;
+}
+
+.form-group>label {
+  @apply block mb-0.5;
+}
+
+.form-group>input,
+.form-group>select {
+  @apply w-full py-1 px-2 rounded-none outline-0 border border-gray-700;
+}
+
+form button {
+  @apply w-full bg-primary text-white cursor-pointer py-2 mt-4;
+}
+
+/* dashboard */
+
+.welcome {
+  @apply bg-amber-50 inline-block min-w-[30%] text-[1.5em] px-[30px] py-[10px]
+}
+
+.dashboard-content>div {
+  @apply mb-(--space-between-elements)
+}
+
+.cards {
+  @apply flex justify-between gap-(--space-between-elements)
+}
+
+.card {
+  @apply bg-primary text-white w-[calc(100%/4)] min-h-(--min-card-height) flex flex-col items-center justify-center gap-(--space-between-elements)
+  /* Adds consistent spacing between card elements */
+}
+
+.card>h3 {
+  @apply text-3xl
+}
+
+.card>p {
+  @apply text-base
+}
+
+.table {
+  @apply w-full
+}
+
+.table thead {
+  @apply bg-primary text-white
+}
+
+table thead th {
+  @apply py-2.5 px-0.5
+}
+
+.table th,
+.table td {
+  @apply p-0.75 text-left
+}
